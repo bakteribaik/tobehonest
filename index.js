@@ -6,7 +6,7 @@ var doc_id = url.split('&')[0].slice(4); //mendapatkan id dengan memisahkan kedu
 var user_nama = url.split('&')[1].slice(5); //mendapatkan nama user dari url
 
 var nama = document.getElementById('detail-title');
-nama.innerHTML = `@${user_nama}`
+nama.innerHTML = `${user_nama}`
 
 function sendMessage() {
     var message = document.getElementById("input-pesan").value; //mendapatkan value message dari hasil input user
