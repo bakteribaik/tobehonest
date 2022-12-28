@@ -15,7 +15,8 @@ function sendMessage() {
     //menambahkan message kedalam dokumen berdasarkan id yang didapatkan dari parameter link ?id=(id)
     db.collection('users').doc(doc_id).collection('inbox').add({
         'messages' : message,
-        'timestamp' : timestamp
+        'timestamp' : timestamp,
+        'opened' : false
     })
     .then(function(){
         window.location.reload();
